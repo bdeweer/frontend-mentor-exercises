@@ -77,7 +77,7 @@ body {
 main {
   display: flex;
   justify-content: center;
-  padding-block: 82px;
+  padding-block: var(--spacing-1600);
   padding-inline: var(--spacing-1600);
   width: 100%;
 }
