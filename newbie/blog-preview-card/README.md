@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://bdeweer.github.io/blog-preview-card/](https://bdeweer.github.io/blog-preview-card/)
-- Live Site URL: [https://bdeweer.github.io/blog-preview-card/](https://bdeweer.github.io/blog-preview-card/)
+- Solution URL: [https://bdeweer.github.io/frontend-mentor-exercises/newbie/blog-preview-card/](https://bdeweer.github.io/frontend-mentor-exercises/newbie/blog-preview-card/)
+- Live Site URL: [https://bdeweer.github.io/frontend-mentor-exercises/newbie/blog-preview-card/](https://bdeweer.github.io/frontend-mentor-exercises/newbie/blog-preview-card/)
 
 ## My process
 

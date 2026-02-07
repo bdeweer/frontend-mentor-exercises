@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  --rose-dark: hsl(332, 51%, 32%);
+  --rose-light: hsl(330, 100%, 98%);
+  --stone-dark: hsl(24, 5%; 18%);
+  --stone-medium: hsl(30, 10%, 34%);
+  --stone-grey: hsl(30, 18%, 87%);
+  --stone-light: hsl(30, 54%, 90%);
+  --brown: hsl(14, 45%, 36%);
+  --white: hsl(0, 0%, 100%);
+  --line-height-100: 100%;
+  --line-height-150: 150%;
+  --letter-spacing: 0px;
+  --spacing-1600: 8rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --font-outfit: "Outfit", sans-serif;
+  --font-young-serif: "Young Serif", serif;
+}
+
+.text-preset-1 {
+  font-family: var(--font-young-serif);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  line-height: var(--line-height-100);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 100;
+  color: var(--stone-dark);
+}
+
+.text-preset-2 {
+  font-family: var(--font-young-serif);
+  font-size: clamp(1.5rem, 1.75vw, 1.75rem);
+  line-height: var(--line-height-100);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 100;
+  color: var(--brown);
+}
+
+.text-preset-3 {
+  font-family: var(--font-outfit);
+  font-size: clamp(1rem, 1.95vw, 1.25rem);
+  line-height: var(--line-height-100);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 600;
+  color: var(--rose-dark);
+}
+
+.text-preset-4 {
+  font-family: var(--font-outfit);
+  font-size: clamp(0.875rem, 1.56vw, 1rem);
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing);
+  color: var(--stone-medium);
+  font-weight: 400;
+}
+.text-preset-4--bold {
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100dvh;
+  background: var(--stone-light);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-block: 82px;
+  padding-inline: var(--spacing-1600);
+  width: 100%;
+}
+
+.content {
+  max-width: 46rem;
+  background: var(--white);
+  padding-inline: var(--spacing-500);
+  padding-block: var(--spacing-500);
+  border-radius: 24px;
+}
+
+.picture {
+  display: block; /* Evite l'espace sous l'image */
+  max-width: 100%; /* L'image ne dépasse jamais son conteneur */
+  height: auto; /* Conserve les propopertions */
+  border-radius: 12px;
+}
+
+.title {
+  padding-block: var(--spacing-500) var(--spacing-300);
+}
+
+.presentation {
+  padding-block-end: var(--spacing-400);
+}
+
+.preparation {
+  background: var(--rose-light);
+  border-radius: 12px;
+  padding-block: var(--spacing-300);
+  padding-inline: var(--spacing-300);
+}
+
+.preparation h2 {
+  padding-block-end: var(--spacing-200);
+}
+
+.ingredients {
+  padding-block: var(--spacing-400);
+}
+
+:is(.title) {
+}
+
+ul,
+ol {
+  margin-block: 0;
+  margin-inline: var(--spacing-300);
+  padding: 0;
+}
+
+li {
+  margin-block: var(--spacing-100);
+  padding-inline: var(--spacing-200);
+}
+
+.preparation-list li::marker {
+  color: var(--rose-dark);
+  font-size: 1.2em;
+}
+
+.ingredients-list {
+  padding-block: var(--spacing-300) 0;
+}
+
+.ingredients-list li::marker {
+  color: var(--brown);
+  font-size: 1.2em;
+}
+
+.instructions {
+  padding-block: var(--spacing-400);
+}
+
+.instructions-list {
+  padding-block: var(--spacing-300) 0;
+  margin-inline: var(--spacing-400);
+}
+
+.instructions-list li::marker {
+  padding-block: var(--spacing-300) 0;
+  color: var(--brown);
+  font-size: 1.2em;
+}
+
+.nutrition {
+  padding-block: var(--spacing-400);
+}
+
+.nutrition p {
+  padding-block: var(--spacing-400);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--stone-grey);
+}
+
+th,
+td {
+  padding: 10px;
+}
+th {
+  text-align: left;
+}
+
+.mesure {
+  color: var(--brown) !important;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-block: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--stone-grey);
+}
+
+.attribution {
+  color: var(--brown);
+  text-align: center;
+  padding-block: 0 var(--spacing-300);
+}
+
+.attribution a {
+  color: var(--dark-raspberry);
+}
+
+@media (max-width: 632px) {
+  main,
+  .content,
+  .picture {
+    margin: 0;
+    padding: 0;
+  }
+  .content,
+  .picture {
+    border-radius: 0;
+    width: 100%;
+  }
+  .picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  footer,
+  .attribution {
+    background: var(--white);
+  }
+
+  .payload {
+    margin-inline: var(--spacing-400);
+  }
+}
