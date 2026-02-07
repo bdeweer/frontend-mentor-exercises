@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --grey-950: hsl(0, 0%, 7%);
+  --grey-500: hsl(0, 0%, 42%);
+  --white: hsl(0, 0%, 100%);
+  --line-height: 150%;
+  --letter-spacing: 0px;
+  --spacing-300: 1.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
+  --box-shadow-default: 5px 5px 0 rgba(0, 0, 0, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  height: 100vh;
+  background: var(--yellow);
+}
+
+main {
+  background: var(--white);
+}
+
+h1 {
+  all: unset;
+  display: block;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 20.4375rem;
+  max-height: 31.3125rem;
+  padding: var(--spacing-300);
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-default);
+  box-sizing: border-box;
+}
+
+.picture {
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar figure {
+  margin: 0;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+}
+
+.avatar img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.spacing-150-container {
+  margin-block-start: var(--spacing-150);
+  margin-block-end: var(--spacing-150);
+}
+
+.spacing-300-container {
+  margin-block-start: var(--spacing-300);
+  margin-block-end: var(--spacing-300);
+}
+
+.button {
+  background: var(--yellow);
+  font-weight: 800;
+  padding: var(--spacing-50) var(--spacing-150);
+  border-radius: 4px;
+}
+
+.font-primary {
+  font-family:
+    "Figtree",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.text-preset-1 {
+  font-size: clamp(1.25rem, 2vw + 0.5rem, 1.5rem);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 600;
+  color: var(--grey-950);
+}
+
+.text-preset-2 {
+  font-size: clamp(0.9rem, 1vw + 0.4rem, 1rem);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 400;
+  color: var(--grey-500);
+}
+
+.text-preset-3 {
+  font-size: clamp(0.8rem, 1vw + 0.3rem, 0.875rem);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 600;
+  color: var(--grey-950);
+}
+
+.text-preset-3.bold {
+  font-size: clamp(0.8rem, 1vw + 0.3rem, 0.875rem);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 800;
+  color: var(--grey-950);
+}
+
+.title {
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 23em) {
+  .container {
+    max-width: 24rem;
+  }
+}
+@media only screen and (min-height: 50em) {
+  .container {
+    max-height: 32.625rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title {
+    transition: none; /* Remove animation to respect user preference */
+  }
+}
